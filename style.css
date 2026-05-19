@@ -1,0 +1,493 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+.header1 {
+  display: flex;
+  gap: 10px;
+}
+.header2 {
+  display: flex;
+  gap: 14px;
+}
+.money {
+  display: flex;
+  gap: 100px;
+}
+.first-money {
+  display: flex;
+  gap: 20px;
+}
+.flex-icon {
+  display: flex;
+  gap: 240px;
+  position: absolute;
+  top: 25%;
+  padding: 30px;
+  width: 0;
+}
+
+.menu-page-hide {
+  position: relative;
+  right: 80px;
+  display: none;
+  background: white;
+  height: 100vh;
+  width: 280px;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.20),0 12px 11px rgba(0,0,0,0.20);
+} 
+.menu-page-hide a {
+  color: black;
+  display: block; 
+  text-align: center;
+  padding: 20px 0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-page:hover > .menu-page-hide {
+  display: block;
+  position: absolute;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+.text h3 {
+  color: hsl(219, 9%, 45%);
+}
+.text h2 {
+  color: hsl(0, 0%, 20%);
+}
+.text p {
+  color: hsl(219, 9%, 60%);
+font-size: 14px;
+line-height: 22px;
+}
+
+.last-containers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 80px;
+  margin-top: 25px;
+}
+.flex1 {
+  background: hsl(223, 64%, 98%);
+  width: 330px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding: 20px;
+}
+.flex2 {
+  background: hsl(26, 100%, 55%);
+  display: flex;
+  width: 330px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 0 10px 36px rgba(0,0,0,0.20), 0 11px 14px rgba(0,0,0,0.20);
+}
+.cart-open {
+  width: 340px;
+  height: 200px;
+  border-radius: 10px;
+  background: white;
+  display: none;
+  position: absolute;
+  right: 10px;
+}
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 30px 20px;
+}
+.cart-open #para1 {
+  color: black;
+  font-weight: 500;
+  border-bottom: 1px solid black;
+}
+.cart-open #para2{
+  color: hsl(219, 9%, 60%);
+}
+.cart-flex img {
+  width: 25px;
+  height: 25px;
+  border-radius: 10px;
+}
+.cart-flex #product1 {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  object-position: center;
+}
+.cart-flex {
+  display: flex;
+}
+.cart-close img {
+  padding-left: 20px;
+}
+
+#empty-msg {
+  color: hsl(219, 9%, 60%);
+  text-align: center;
+  font-weight: 600;
+  padding: 30px 0;
+}
+
+button {
+  width: 180px;
+  height: 40px;
+  background: hsl(26, 100%, 55%);
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 10px;
+  position: relative;
+  left: 50px;
+}
+
+/*The code below is for large product image lightbox*/
+
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.75);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+.lightbox-content {
+  position: relative;
+  width: 320px;
+}
+.lightbox-content img#lightbox-img {
+  width: 100%;
+  border-radius: 15px;
+}
+#close-lightbox {
+  position: absolute;
+  top: -30px; right: 0;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+.lightbox-icons {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 45%;
+  padding: 0 10px;
+}
+.lightbox-icons img {
+  background: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+
+
+
+/* =============================================
+   SMALL MOBILE — up to 375px
+   ============================================= */
+@media (max-width: 375px) {
+  header {
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .first-image img {
+    height: 250px;
+  }
+
+  .flex1,
+  .flex2 {
+    width: 290px;
+  }
+
+  .cart-open {
+    width: 300px;
+    right: 5px;
+  }
+
+  .text {
+    padding: 0 15px;
+  }
+}
+
+/* =============================================
+   TABLET — 600px and up
+   ============================================= */
+@media (min-width: 600px) {
+  header {
+    gap: 80px;
+    height: 70px;
+    padding: 0 30px;
+  }
+
+.header1 {
+  flex-direction: row-reverse;
+}
+  .first-image img {
+    height: 420px;
+    object-fit: cover;
+  }
+
+  .text {
+    padding: 25px 50px;
+  }
+
+  .text h2 {
+    font-size: 28px;
+  }
+
+  .text p {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .money {
+    gap: 60px;
+  }
+
+  .flex1,
+  .flex2 {
+    width: 420px;
+  }
+
+  .cart-open {
+    width: 380px;
+    right: 20px;
+  }
+
+  .last-containers {
+    margin-top: 30px;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .menu-page-hide {
+    display: flex !important;
+    position: static !important;
+    height: auto;
+    width: auto;
+    background: transparent;
+    box-shadow: none;
+    flex-direction: row;
+    gap: 20px;
+    z-index: auto !important;
+  }
+
+  .menu-page-hide a {
+    padding: 0;
+    font-size: 13px;
+    color: hsl(219, 9%, 45%);
+  }
+}
+
+/* =============================================
+   DESKTOP — 900px and up
+   ============================================= */
+@media (min-width: 900px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  header {
+    grid-column: 1 / -1;
+    height: 80px;
+    padding: 0 40px;
+    justify-content: space-between;
+    border-bottom: 1px solid hsl(220, 13%, 91%);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    gap: 0;
+  }
+
+  .header1 {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 40px;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .menu-page-hide {
+    display: flex !important;
+    position: static !important;
+    height: auto;
+    width: auto;
+    background: transparent;
+    box-shadow: none;
+    flex-direction: row;
+    gap: 24px;
+    z-index: auto !important;
+  }
+
+  .menu-page-hide a {
+    padding: 0;
+    font-size: 14px;
+    color: hsl(219, 9%, 45%);
+  }
+
+  .menu-page-hide a:hover {
+    color: hsl(0, 0%, 0%);
+    border-bottom: 2px solid hsl(26, 100%, 55%);
+    padding-bottom: 2px;
+  }
+
+  header img[alt="avatar"] {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  header img[alt="avatar"]:hover {
+    border: 2px solid hsl(26, 100%, 55%);
+  }
+
+  .first-image {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 60px 40px 60px 60px;
+  }
+
+  .first-image img {
+    height: auto !important;
+    width: 100% !important;
+    border-radius: 16px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+  }
+
+  .text {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 60px 60px 20px 40px;
+    align-self: center;
+    gap: 24px;
+  }
+
+  .text h3 {
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  .text h2 {
+    font-size: 42px;
+    line-height: 1.1;
+  }
+
+  .text p {
+    font-size: 15px;
+    line-height: 26px;
+  }
+
+  .money {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .first-money {
+    align-items: center;
+  }
+
+  .last-containers {
+    grid-column: 2;
+    grid-row: 3;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0 60px 60px 40px;
+    margin: 0;
+    gap: 16px;
+  }
+
+  .flex1 {
+    width: 160px;
+    height: 56px;
+  }
+
+  .flex2 {
+    width: 240px;
+    height: 56px;
+    cursor: pointer;
+  }
+
+  .flex2:hover {
+    opacity: 0.7;
+  }
+
+  .cart-open {
+    width: 360px;
+    height: auto;
+    min-height: 200px;
+    right: 40px;
+    top: 80px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  }
+
+  .lightbox-content {
+    width: 480px;
+  }
+}
+
+/* =============================================
+   LARGE DESKTOP — 1200px and up
+   ============================================= */
+@media (min-width: 1200px) {
+  body {
+    max-width: 1400px;
+  }
+
+  .text h2 {
+    font-size: 48px;
+  }
+
+  .flex2 {
+    width: 280px;
+  }
+
+  .lightbox-content {
+    width: 540px;
+  }
+}

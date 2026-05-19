@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header1">
+      <div class="menu-page">
+    <img src="icon-menu.svg" alt="menu-icon" id="menu"/>
+    <div class="menu-page-hide">
+      <a href="#">Collections</a>
+       <a href="#">Men</a>
+       <a href="#">Women</a>
+       <a href="#">About</a>
+          <a href="#">Contact</a>
+    </div>
+    </div>
+    <img src="logo.svg" alt="logo"/>
+    </div>
+    <div class="header2">
+      <div class="cart-close">
+      <img src="icon-cart.svg" alt="icon-cart" id="cart-image"/>
+      <div class="cart-open">
+       <div class="cart">
+    <p id="para1">Cart</p>
+    <div class="cart-flex" style="display:none;">
+      <img src="image-product-1.jpg" id="product1"/>
+      <p id="para2"></p>
+      <img src="icon-delete.svg"/>
+    </div>
+    <p id="empty-msg">Your cart is empty.</p>
+  </div>
+  <div class="button" style="display:none;">
+    <button>Check out</button>
+  </div>
+</div>
+    </div>
+      </div>
+      </div>
+      <img src="image-avatar.png" alt="avatar" width="20px" height="20px"/>
+    </div>
+  </header>
+  <div class="first-image">
+    <img src="image-product-1.jpg" alt="product1" width="100%" height="300px" id="product1"/>
+  </div>
+  <div class="text">
+    <h3>Sneaker company</h3>
+    <h2>Fall Limited Edition Sneakers</h2>
+    <p>These low-profile sneakers are your perfect<br> casual wear companion.Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+  <div class="money">
+    <div class="first-money">
+      <h2>$125.00</h2>
+      <h4 style="background: black; color: white; height: 30px; width: 50px; border-radius: 10px; text-align: center; padding-top: 3px;">50%</h4>
+    </div>
+      <div class="second-money">
+        <h4 style="text-decoration: line-through; color:hsl(219, 9%, 60%);">250.00</h4>
+      </div>
+  </div>
+  </div>
+  <div class="last-containers">
+    <div class="flex1">
+      <img src="icon-minus.svg" id="minus"/>
+      <span id="display">0</span>
+      <img src="icon-plus.svg" id="plus"/>
+    </div>
+      <div class="flex2">
+        <img src="icon-cart.svg"/>
+        <span>Add to cart</span>
+      </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
